@@ -1,0 +1,259 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+/*-----root_colors------*/
+:root {
+  --ligth: #e4f1fe;
+  --midium: #8dc6ff;
+  --brigth: #22313f;
+  --dark: #005689;
+  --body_back: #a393eb;
+  --info_text: #3e4a61;
+  --danger: #ff0000;
+  --primary: #00bbf0;
+  --success: #4ef037;
+  --warning: #f8b500;
+  --logo: #374242;
+  --side_bar: #7c73e6;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  appearance: none;
+  border: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 14px;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  font-family: "Ubuntu Mono", monospace;
+  font-size: 0.88rem;
+  background: var(--body_back);
+  user-select: none;
+  overflow-x: hidden;
+}
+
+.container {
+  display: grid;
+  width: 96%;
+  margin: 0 auto;
+  background: var(--side_bar);
+  gap: 1.8rem;
+  grid-template-columns: 14rem auto 23rem;
+}
+
+a {
+  color: var(--dark);
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+h1 {
+  font-weight: 800;
+  font-size: 1.8rem;
+}
+
+h2 {
+  font-size: 1.4rem;
+}
+
+h3 {
+  font-size: 0.87rem;
+}
+
+h4 {
+  font-size: 0.8rem;
+}
+
+h5 {
+  font-size: 0.77rem;
+}
+
+small {
+  font-size: 0.76rem;
+}
+
+.profile-photo {
+  width: 2.8rem;
+  height: 2.8rem;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.text-muted {
+  color: var(--info_text);
+}
+
+p {
+  color: var(--brigth);
+}
+
+.primary {
+  color: var(--primary);
+}
+
+.warning {
+  color: var(--warning);
+}
+
+.success {
+  color: var(--success);
+}
+
+.danger {
+  color: var(--danger);
+}
+
+.logo_span {
+  color: var(--logo);
+}
+
+aside {
+  height: 100vh;
+  background: var(--primary);
+}
+
+aside .top {
+  background: #22313f;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1.4rem;
+}
+
+aside logo {
+  display: flex;
+  gap: 0.8rem;
+}
+
+aside .logo img {
+  width: 2em;
+  height: 2em;
+  border-radius: 50%;
+  position: relative;
+}
+
+aside .close {
+  display: none;
+}
+
+/* ===========side_bar================= */
+
+aside .sidebar {
+  background: white;
+  display: flex;
+  flex-direction: column;
+  height: 86vh;
+  position: relative;
+  top: 3em;
+}
+
+aside h3 {
+  font-weight: 300;
+}
+
+aside .sidebar a {
+  display: flex;
+  color: var(--info_text);
+  margin-left: 2rem;
+  gap: 1rem;
+  align-items: center;
+  position: relatives;
+  height: 3.7rem;
+  transition: all 300ms ease;
+}
+
+aside .sidebar a span {
+  font-size: 1.6rem;
+  transition: all 300ms ease;
+}
+
+aside .sidebar a.active {
+  background: var(--ligth);
+  color: var(--dark);
+  margin-left: 0;
+}
+
+aside .sidebar a.active:before {
+  content: "";
+  width: 6px;
+  height: 100%;
+  background: var(--side_bar);
+}
+
+aside .sidebar a.active span {
+  color: var(--dark);
+  margin-left: calc(1rem - 3px);
+}
+
+aside .sidebar a:hover {
+  color: var(--midium);
+}
+
+aside .sidebar a:hover span {
+  margin-left: 1rem;
+}
+
+/*=========================main============================*/
+
+main {
+  margin-top: 1.4rem;
+}
+
+main .date {
+  display: inline-block;
+  background-color: var(--brigth);
+  border-radius: 0.4rem;
+  margin-top: 1rem;
+  padding: 0.5rem;
+}
+
+main .date input[type="date"] {
+  background: transparent;
+  color: var(--ligth);
+}
+
+main .insigth {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.6rem;
+}
+
+main .insigth > div {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 0.4rem;
+  margin-top: 1rem;
+  box-shadow: 5px 10px var(--body_back);
+  transition: all 300ms ease;
+}
+
+main .insigth > div:hover {
+  box-shadow: none;
+}
+
+main .insigth > div span {
+  background: var(--warning);
+  padding: 0.5rem;
+  border-radius: 50%;
+  color: var(--ligth);
+  font-size: 2rem;
+}
+
+main .insigth > div.total-staffs span {
+  background: var(--success);
+}
+
+main .insigth > div.relived-staff span {
+  background: var(--danger);
+}

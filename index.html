@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dash_board</title>
+    <!--matireal icon CDN-->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <aside>
+        <div class="logo">
+          <img src="./image/logo.png" alt="logo" />
+          <h2>DataBase<span class="logo_span">.com</span></h2>
+        </div>
+        <div class="close" id="close-btn">
+          <span class="material-icons-sharp"> close </span>
+        </div>
+        <div class="sidebar">
+          <a href="#" class="active">
+            <span class="material-icons-sharp"> badge </span>
+            <h3>Staff_data</h3>
+          </a>
+          <a href="#">
+            <span class="material-icons-sharp"> verified </span>
+            <h3>Staff_attendace</h3>
+          </a>
+          <a href="#">
+            <span class="material-icons-sharp"> payments </span>
+            <h3>Staff_payment_details</h3>
+          </a>
+          <a href="#">
+            <span class="material-icons-sharp"> person_add </span>
+            <h3>Add_new_staff</h3>
+          </a>
+          <a href="#">
+            <span class="material-icons-sharp"> summarize </span>
+            <h3>Month_wise_report</h3>
+          </a>
+        </div>
+      </aside>
+      <!--end of aside bar-->
+      <main>
+        <h1>Dashborad</h1>
+        <div class="date">
+          <input type="date" />
+        </div>
+        <div class="insigth">
+          <div class="total-staffs">
+            <span class="material-icons-sharp"> group </span>
+            <div class="middle">
+              <div class="left">
+                <h3>Total no.of Staff</h3>
+                <h1>25</h1>
+              </div>
+              <div class="progress">
+                <svg>
+                  <circle cx="38" cy="38" r="36"></circle>
+                </svg>
+                <div class="number">
+                  <p>100%</p>
+                </div>
+              </div>
+            </div>
+            <small class="text-muted">from the start</small>
+          </div>
+          <!--end of staff details-->
+          <div class="relived-staff">
+            <span class="material-icons-sharp"> person_remove </span>
+            <div class="middle">
+              <div class="left">
+                <h3>No.of.staff-relived</h3>
+                <h1>1</h1>
+              </div>
+              <div class="progress">
+                <svg>
+                  <circle cx="38" cy="38" r="36"></circle>
+                </svg>
+                <div class="number">
+                  <p>1%</p>
+                </div>
+              </div>
+            </div>
+            <small class="text-muted">from the start</small>
+          </div>
+          <!--end of relived staff-->
+          <div class="total-staffs">
+            <span class="material-icons-sharp"> assignment_ind </span>
+            <div class="middle">
+              <div class="left">
+                <h3>Total no.of Staff at current</h3>
+                <h1>24</h1>
+              </div>
+              <div class="progress">
+                <svg>
+                  <circle cx="38" cy="38" r="36"></circle>
+                </svg>
+                <div class="number">
+                  <p>90%</p>
+                </div>
+              </div>
+            </div>
+            <small class="text-muted">from the start</small>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
