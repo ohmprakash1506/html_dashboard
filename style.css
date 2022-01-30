@@ -35,7 +35,7 @@ body {
   height: 100vh;
   font-family: "Ubuntu Mono", monospace;
   font-size: 0.88rem;
-  background: var(--body_back);
+  background: var(--side_bar);
   user-select: none;
   overflow-x: hidden;
 }
@@ -234,7 +234,7 @@ main .insigth > div {
   padding: 1rem;
   border-radius: 0.4rem;
   margin-top: 1rem;
-  box-shadow: 5px 10px var(--body_back);
+  box-shadow: 5px 10px var(--logo);
   transition: all 300ms ease;
 }
 
@@ -256,4 +256,73 @@ main .insigth > div.total-staffs span {
 
 main .insigth > div.relived-staff span {
   background: var(--danger);
+}
+
+main .insigth > div.total-staffs-current span {
+  background: var(--warning);
+}
+
+main .insigth > div.middle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+main .insigth h3 {
+  margin: 1rem 0 0.6rem;
+  font-size: 1rem;
+}
+
+main .insigth .progress {
+  position: relative;
+  width: 92px;
+  height: 92px;
+  border-radius: 50%;
+}
+
+main .insigth svg {
+  background: #fff;
+  width: 7rem;
+  height: 7rem;
+}
+
+main .insigth svg circle {
+  fill: none;
+  stroke: var(--side_bar);
+  stroke-width: 14;
+  stroke-linecap: round;
+  transform: translate(5px, 5px);
+  stroke-dasharray: 110;
+  stroke-dashoffset: 92;
+}
+
+main .insigth .total-staffs-current svg circle {
+  stroke-dashoffset: -30;
+  stroke-dasharray: 200;
+}
+
+main .insigth .relived-staff svg circle {
+  stroke-dashoffset: 20;
+  stroke-dasharray: 200;
+}
+
+main .insigth .total-staffs-current svg circle {
+  stroke-dashoffset: 35;
+  stroke-dasharray: 110;
+}
+
+main .insigth .progress .number {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main .insigth small {
+  margin-top: 1.3 rem;
+  display: block;
 }
